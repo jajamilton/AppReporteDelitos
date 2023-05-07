@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppReporteDelitos.Registro"
+             Background="#170A32"
+             Title="Registro">
+    <VerticalStackLayout>
+
+
+        <Image Source="logoapp.png"
+               WidthRequest="350" />
+
+
+        <Border
+            Padding="10"
+            Background="#D5D5D5"
+            Stroke="#D5D5D5"
+            Margin="40">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"></RoundRectangle>
+
+            </Border.StrokeShape>
+            <StackLayout >
+
+                <Label Text="Nombre:" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                <Editor Background="#b3b2b2">
+                </Editor>
+                <Label Text="Apellido" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                <Editor Background="#b3b2b2">
+                </Editor>
+                <Label Text="Direccion" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                <Editor Background="#b3b2b2">
+                </Editor>
+                <Label Text="Email" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                <Editor Background="#b3b2b2">
+                </Editor>
+                <Label Text="Celular" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                <Editor Background="#b3b2b2">
+                </Editor>
+                <Label Text="Contraseña" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                <Editor Background="#b3b2b2">
+                </Editor>
+
+                <Label Padding="8"></Label>
+
+            </StackLayout>
+
+        </Border>
+
+
+        <Border StrokeThickness="0">
+            <Button Text="Registrarse" TextColor="White" BackgroundColor="#844e9b" Padding="10" Margin="40,0,40,0" FontAttributes="Bold" FontSize="18" />
+        </Border>
+        <Label Padding="0"></Label>
+        <Border StrokeThickness="0">
+            <Button Text="Regresar" TextColor="White" BackgroundColor="#2087A2" Padding="10" Margin="40,0,40,0" FontAttributes="Bold" FontSize="18" />
+        </Border>
+
+
+    </VerticalStackLayout>
+</ContentPage>
