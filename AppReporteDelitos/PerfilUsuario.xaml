@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppReporteDelitos.PerfilUsuario"
+             NavigationPage.HasNavigationBar="False"
+             Background="#170A32"
+             Title="Perfil">
+    <ContentPage.Resources>
+        <Color x:Key="Primario">#170A32</Color>
+        <Color x:Key="Secundario">#844e9b</Color>
+        <Color x:Key="Tercer">#2087A2</Color>
+        <Color x:Key="Cuarto">#D5D5D5</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label Margin="15"></Label>
+
+            <Frame Margin="30,0,30,0" BackgroundColor="{StaticResource Cuarto}" BorderColor="{StaticResource Cuarto}">
+
+                <VerticalStackLayout>
+
+                    <Label Text="Nombre:" Margin="10" TextColor="#170A32" FontSize="16" FontAttributes="Bold"></Label>
+
+                    <Label Text="Perdo Antonio Gutierrez" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+
+                    <Label Text="Celular:" Margin="10" TextColor="#170A32" FontSize="16" FontAttributes="Bold"></Label>
+
+                    <Label Text="3213659865" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+
+                    <Label Text="Correo:" Margin="10" TextColor="#170A32" FontSize="16" FontAttributes="Bold"></Label>
+
+                    <Label Text="Pedrogmail.com.co" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+
+                    <Label Text="Direccion:" Margin="10" TextColor="#170A32" FontSize="16" FontAttributes="Bold"></Label>
+
+                    <Label Text="Carrera1 #32-85" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+
+                    <Label Text="Celular Cuadrante:" Margin="10" TextColor="#170A32" FontSize="16" FontAttributes="Bold"></Label>
+
+                    <Label Text="32565987565" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Button Text="Cerrar Sesion" TextColor="White" BackgroundColor="{StaticResource Secundario}" Padding="10" Margin="40,15,40,25" FontAttributes="Bold" FontSize="18" Clicked="ClicCerrar" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>

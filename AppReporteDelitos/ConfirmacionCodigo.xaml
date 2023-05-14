@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppReporteDelitos.ConfirmacionCodigo"
+             BackgroundColor="#170A32"
+             NavigationPage.HasNavigationBar="False"
+             Title="ConfirmacionCodigo">
+
+    <ContentPage.Resources>
+        <Color x:Key="Primario">#170A32</Color>
+        <Color x:Key="Secundario">#844e9b</Color>
+        <Color x:Key="Tercer">#2087A2</Color>
+        <Color x:Key="Cuarto">#D5D5D5</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Image Source="logoapp.png"
+               WidthRequest="350" />
+
+            <Frame Margin="30,0,30,0" BackgroundColor="{StaticResource Cuarto}" BorderColor="{StaticResource Cuarto}">
+
+                <VerticalStackLayout>
+
+                    <Label Text="Ingrese el código de seguridad que se ha enviado a través de mensaje de texto"
+                           FontSize="18"
+                           Margin="0,5,0,20"
+                           HorizontalTextAlignment="Center"></Label>
+
+
+                    <Label Text="Celular:" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                    <Entry BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Codigo"
+                       HorizontalTextAlignment="Center"
+                       x:Name="Celular"
+                       Keyboard="Numeric">
+                    </Entry>
+
+                    <Button Text="Enviar nuevo codigo por mensaje de texto" BackgroundColor="#BDBEBF" TextColor="Gray" Margin="10"></Button>
+
+                    <Button Text="Enviar Nuevo codigo por correo electronico" BackgroundColor="#BDBEBF" TextColor="Gray" Margin="10"></Button>
+
+                    <Button Text="Llamarme" BackgroundColor="#BDBEBF" TextColor="Gray" Margin="10"></Button>
+
+                </VerticalStackLayout>
+                
+            </Frame>
+
+            <Button Text="Enviar codigo" TextColor="White" BackgroundColor="#844e9b" Padding="10" Margin="40,20,40,3" FontAttributes="Bold" FontSize="18" Clicked="ClicIniciar" />
+
+            <Button Text="Regresar" TextColor="White" BackgroundColor="#2087A2" Padding="10" Margin="40,15,40,25" FontAttributes="Bold" FontSize="18" Clicked="ClicRegresar" />
+
+
+        </VerticalStackLayout>
+        
+    </ScrollView>
+    
+    
+</ContentPage>

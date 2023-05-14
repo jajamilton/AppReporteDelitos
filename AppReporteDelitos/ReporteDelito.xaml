@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppReporteDelitos.ReporteDelito"
+             Background="#170A32"
+             NavigationPage.HasNavigationBar="False"
+             Title="Reportar Delito">
+    <ContentPage.Resources>
+        <Color x:Key="Primario">#170A32</Color>
+        <Color x:Key="Secundario">#844e9b</Color>
+        <Color x:Key="Tercer">#2087A2</Color>
+        <Color x:Key="Cuarto">#D5D5D5</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label Margin="15"></Label>
+
+            <Frame Margin="30,0,30,0" BackgroundColor="{StaticResource Cuarto}" BorderColor="{StaticResource Cuarto}">
+
+                <VerticalStackLayout>
+
+                    <Label Text="Delito:" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                    <Entry BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Delito"
+                       HorizontalTextAlignment="Center"
+                       x:Name="Delito">
+                    </Entry>
+
+                    <Label Text="Direccion:" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                    <Entry BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Direccion"
+                       HorizontalTextAlignment="Center"
+                       x:Name="Direccion">
+                    </Entry>
+
+                    <Label Text="Nombres y Apellidos:" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                    <Entry BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Nombres y Apellidos"
+                       HorizontalTextAlignment="Center"
+                       x:Name="Nombre">
+                    </Entry>
+
+                    <Label Text="Descripcion" Margin="10" TextColor="#170A32" FontSize="16"></Label>
+                    <Editor BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Descripcion"
+                       HorizontalTextAlignment="Center"
+                       HeightRequest="100"
+                       x:Name="Descripcion">
+                    </Editor>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Button Text="Reportar" TextColor="White" BackgroundColor="#844e9b" Padding="10" Margin="40,20,40,3" FontAttributes="Bold" FontSize="18" Clicked="ClicReportar" />
+
+            <Button Text="Cerrar" TextColor="White" BackgroundColor="#2087A2" Padding="10" Margin="40,15,40,25" FontAttributes="Bold" FontSize="18" Clicked="ClicCerrar" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>

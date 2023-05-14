@@ -3,48 +3,74 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppReporteDelitos.InicioSesion"
              Background="#170A32"
+             NavigationPage.HasNavigationBar="False"
              Title="InicioSesion">
-    <VerticalStackLayout>
+    
+    <ContentPage.Resources>
+        <Color x:Key="Primario">#170A32</Color>
+        <Color x:Key="Secundario">#844e9b</Color>
+        <Color x:Key="Tercer">#2087A2</Color>
+        <Color x:Key="Cuarto">#BFBFBF</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Label Padding="0,20,30,30"></Label>
+
+            <Image Source="logoapp.png" WidthRequest="350" />
+
+            <Label Padding="0,20,30,30"></Label>
+
+            <Frame Margin="30,0,30,0" BackgroundColor="{StaticResource Cuarto}" BorderColor="{StaticResource Cuarto}">
+
+                <VerticalStackLayout VerticalOptions="Center">
+
+                    <Label
+                    BackgroundColor="{StaticResource Cuarto}"
+                    Padding="0,0,0,20"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    HorizontalTextAlignment="Start"
+                    Text="Usuario:">
+                    </Label>
+
+                    <Entry BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Usuario"
+                       HorizontalTextAlignment="Center">
+
+                    </Entry>
+
+                    <Label
+                    BackgroundColor="{StaticResource Cuarto}"
+                    Padding="0,20,0,20"
+                    FontAttributes="Bold"
+                    FontSize="Small"
+                    HorizontalTextAlignment="Start"
+                    Text="Contraseña:">
+                    </Label>
+
+                    <Entry BackgroundColor="{StaticResource Cuarto}"
+                       VerticalOptions="Center"
+                       Placeholder="Contraseña"
+                       HorizontalTextAlignment="Center"
+                       IsPassword="True">
+
+                    </Entry>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Button Text="Iniciar" TextColor="White" BackgroundColor="#844e9b" Margin="30,20,30,0" FontAttributes="Bold" FontSize="18" Clicked="ClicIniciar" />
+
+            <Button Text="Regresar" TextColor="White" BackgroundColor="#2087A2" Padding="10" Margin="30,20,30,0" FontAttributes="Bold" FontSize="18" Clicked="ClicRegresar" />
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 
-        <Label Padding="20"></Label>
 
-        <Image Source="logoapp.png"
-               WidthRequest="350" />
-
-        <Border
-            Padding="10"
-            Background="#D5D5D5"
-            Stroke="#D5D5D5"
-            Margin="40">
-            <Border.StrokeShape>
-                <RoundRectangle CornerRadius="10"></RoundRectangle>
-
-            </Border.StrokeShape>
-            <StackLayout >
-
-                <Label Text="Usuario:" Margin="10" TextColor="#170A32" FontSize="16"></Label>
-                <Editor Background="#b3b2b2">
-                </Editor>
-                <Label Text="Contraseña" Margin="10" TextColor="#170A32" FontSize="16"></Label>
-                <Editor Background="#b3b2b2">
-                </Editor>
-
-                <Label Padding="8"></Label>
-
-            </StackLayout>
-
-        </Border>
-
-        <Border StrokeThickness="0">
-            <Button Text="Iniciar" TextColor="White" BackgroundColor="#844e9b" Padding="10" Margin="40,0,40,0" FontAttributes="Bold" FontSize="18" />
-        </Border>
-        <Label Padding="0"></Label>
-        <Border StrokeThickness="0">
-            <Button Text="Regresar" TextColor="White" BackgroundColor="#2087A2" Padding="10" Margin="40,0,40,0" FontAttributes="Bold" FontSize="18" />
-        </Border>
-
-
-
-    </VerticalStackLayout>
 </ContentPage>

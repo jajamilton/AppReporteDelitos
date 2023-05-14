@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppReporteDelitos.NotificacionAlarma"
+             NavigationPage.HasNavigationBar="False"
+             Background="#170A32"
+             Title="Notificacion">
+    <ContentPage.Resources>
+        <Color x:Key="Primario">#170A32</Color>
+        <Color x:Key="Secundario">#844e9b</Color>
+        <Color x:Key="Tercer">#2087A2</Color>
+        <Color x:Key="Cuarto">#D5D5D5</Color>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label Margin="15"></Label>
+            
+            <Frame Margin="30,0,30,0"  BackgroundColor="{StaticResource Cuarto}" BorderColor="{StaticResource Cuarto}">
+
+                <StackLayout>
+
+                    <ImageButton Source="alarma.png"
+                    Clicked="ClicAlarma"
+                    HorizontalOptions="Center"
+                    HeightRequest="450"
+                    VerticalOptions="End" />
+
+                </StackLayout>
+
+            </Frame>
+
+            <Button Text="Cerrar Sesion" TextColor="White" BackgroundColor="{StaticResource Secundario}" Padding="10" Margin="40,15,40,25" FontAttributes="Bold" FontSize="18" Clicked="ClicCerrar" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

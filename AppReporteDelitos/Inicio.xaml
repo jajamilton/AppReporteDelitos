@@ -3,40 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppReporteDelitos.Inicio"
              Background="#170A32"
+             NavigationPage.HasNavigationBar="False"
              Title="Inicio">
-    
-    
-    <VerticalStackLayout>
 
-        <Label Padding="20"></Label>
-        
-        <Image Source="logoapp.png"
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label Padding="20"></Label>
+
+            <Image Source="logoapp.png"
                WidthRequest="350" />
 
-        <Label Padding="40"></Label>
+            <Label Padding="40"></Label>
 
-        <Button Text="Iniciar Sesion" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="10" Margin="10,5,10,5" FontAttributes="Bold" FontSize="18" />
+            <Button Text="Iniciar Sesion" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="20" Margin="15,10,15,0" FontAttributes="Bold" FontSize="18" Clicked="ClicIniciarSesion" />
 
-        <Button Text="Registrase" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="10" Margin="10" FontAttributes="Bold" FontSize="18" />
+            <Button Text="Registrarse" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="20" Margin="15,10,15,0" FontAttributes="Bold" FontSize="18" Clicked="ClicRegistrar" />
 
-        <Button Text="Iniciar con Google" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="10"  FontAttributes="Bold" FontSize="18">
-            <Button.ImageSource>
-                <FileImageSource File="googlelogo.png" ></FileImageSource>
-            </Button.ImageSource>
-            <Button.WidthRequest>400</Button.WidthRequest>
-            <Button.HeightRequest>50</Button.HeightRequest>
-        </Button>
+            <Button Text="Iniciar con Google" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="15" Margin="15,10,15,0"  FontAttributes="Bold" FontSize="18" Clicked="ClicIniciarGoogle">
+                <Button.ImageSource>
+                    <FileImageSource File="googlelogo.png"  ></FileImageSource>
+                </Button.ImageSource>
+            </Button>
 
-        <Button Text="Inciar por Celular" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="10" Margin="10" FontAttributes="Bold" FontSize="18" >
-            <Button.ImageSource>
-                <FileImageSource File="celularlogo.png"></FileImageSource>
-            </Button.ImageSource>
-            <Button.WidthRequest>400</Button.WidthRequest>
-            <Button.HeightRequest>50</Button.HeightRequest>
-        </Button>
+            <Button Text="Inciar por Celular" TextColor="#170A32" BackgroundColor="#C3C3C3" Padding="15" Margin="15,10,15,0" FontAttributes="Bold" FontSize="18" Clicked="ClicIniciarCelular" >
+                <Button.ImageSource>
+                    <FileImageSource File="celularlogo.png"></FileImageSource>
+                </Button.ImageSource>
+            </Button>
 
-    </VerticalStackLayout>
-    
+        </VerticalStackLayout>
+    </ScrollView>
 
 
 
